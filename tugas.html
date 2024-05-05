@@ -1,0 +1,149 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="tugas.css">
+</head>
+<body>
+    <div>
+        <!-- Tempat di mana navbar akan dimuat -->
+        <div id="navbarContainer"></div>
+        <!-- isi  -->
+        <div class="wrapper">
+            <section id="Home">
+                <div class="homeLeft">
+                    <h2 class="hello">Hello All I a'm</h2>
+                    <h1 class="nama">Revinindia Oktaimanuella</h1>
+                    <main class="containerText">
+                        <p class="textAnimation">I'm a</p>
+                        <section class="animation">
+                          <div class="first"><div>college student</div></div>
+                          <div class="second"><div>Web Developer</div></div>
+                          <div class="third"><div>ui/ux designer</div></div>
+                        </section>
+                      </main>
+                    <a href="https://drive.google.com/file/d/1OR_PEkl8r1vL3f8dCfEpKNxnY1c79ea-/view?usp=sharing">
+                        <button class="btn">My Resume</button>
+                    </a>
+                </div>
+                <div class="home-right">
+                    <img src="img/Revinindia Oktaimanuella.jpegc:\Users\Lenovo\Pictures\surabaya logo.jpeg" alt="Revinindia Oktaimanuella">
+                </div>
+            </section>
+            <section id="About">
+                <div class="aboutTop">
+                    <div class="item">
+                        <img src="img/surabaya logo.jpeg" alt="Avatar" class="image, width">
+                        <div class="overlay">
+                          <div class="text">Asal<br>surabaya</div>
+                        </div>      
+                    </div>
+                    <div class="item">
+                        <img src="img/sistem informasi.jpeg" alt="Avatar" class="image ">
+                        <div class="overlay">
+                          <div class="text">Jurusan<br>Sistem Informasi (SiFo)</div>
+                        </div>      
+                    </div>
+                    <div class="item">
+                        <img src="img/logo upn.png" alt="Avatar" class="image">
+                        <div class="overlay">
+                          <div class="text">Kampus<br>UPN V Jawa Timur</div>
+                        </div>      
+                    </div>
+                    <div class="item">
+                        <img src="img/istri idaman.jpg" alt="Avatar" class="image">
+                        <div class="overlay">
+                          <div class="text">Cita-cita menjadi<br>Ibu kos dan istri idaman</div>
+                        </div>      
+                    </div>
+                </div>
+                <p class="deskripsi">Saya Revinindia Oktaimanuella, atau yang akrab dipanggil Repi. Sebagai seorang mahasiswa Sistem Informasi, saya berkomitmen untuk belajar dengan giat dan terus meningkatkan diri dalam bidang ini. Saya menganggap challenge sebagai kesempatan untuk mengembangkan kreativitas saya dan menerapkan pengetahuan yang saya peroleh.</p>
+                <div class="aboutBottom">
+                    <h1 class="aboutBottom">About</h1>
+                </div>
+            </section>
+            <section id="Skill">
+                <div class="nameSkill">Skill</div>
+                <div id="slider">
+                    <input type="radio" name="slider" id="slide1" checked>
+                    <div id="slides">
+                       <div id="overflow">
+                          <div class="inner">
+                             <div class="slide slide_1">
+                                <div class="slide-content">
+                                </div>
+                                </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                    <div id="controls">
+                       <label for="slide1"></label>
+                    </div>
+                    <div id="bullets">
+                       <label for="slide1"></label>
+                    </div>
+                 </div>
+            </section>
+        </div>
+    </div>
+
+    <section id="Contact">
+            <h3 class="ContactTop">Contact</h3>
+
+            <div class="ContactBottom">
+                <div class="footer">
+                    <div class="footer-section">
+                        <h3 class="CFI">Informasi</h3>
+                        <p>Nama : Revinindia Oktaimanuella</p>
+                        <p>Kuliah : Universitas Pembangunan Nasional "Veteran" Jawa Timur</p>
+                        <p>Jurusan : Sistem Informasi</p>
+                    </div>
+                    <div class="footer-section">    
+                        <h3 class="CFSM">Sosial Media</h3>
+                        <a class="link" href="https://www.instagram.com/revinindia_/?utm_source=qr&igsh=ZmZ2dTVwZ2duaDVo"><img src="img/4691240_instagram_icon.svg" alt="Instagram"></a>
+                        <a class="link" href="https://www.linkedin.com/in/revinindia-oktaimanuella-711b01256/"><img src="img/326115_linkedin_linked_linked in_logo_icon.svg" alt="Linkedin"></a>
+                        <a class="link" href="https://github.com/revinindiaokt"><img src="img/4747499_github_icon.svg" alt="GitHub"></a>
+                        <a class="link" href="https://t.me/repiiiolaf"><img src="img/401554_telegram_icon.svg" alt="Telegram"></a>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <script>
+        // Memuat file navbar.html menggunakan Fetch API
+        fetch('navbar.html')
+            .then(response => {
+                // Memastikan respon adalah OK (200)
+                if (!response.ok) {
+                    throw new Error('Gagal memuat navbar.');
+                }
+                // Mengembalikan teks dari respon
+                return response.text();
+            })
+            .then(data => {
+                // Menyisipkan konten navbar.html ke dalam elemen dengan ID navbarContainer
+                document.getElementById('navbarContainer').innerHTML = data;
+
+                // menu toggle setelah navbar dimuat
+                const menuToggle = document.querySelector('.menu-toggle input');
+                const nav = document.querySelector('nav ul');
+
+                menuToggle.addEventListener('click', function () {
+                  nav.classList.toggle('slide');
+                });
+            })
+            .catch(error => {
+                console.error('Ada kesalahan:', error);
+            });
+    </script>
+</body>
+</html>
+
+</body>
+</html>

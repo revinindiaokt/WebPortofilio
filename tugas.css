@@ -1,0 +1,467 @@
+/* CSS dasar */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', sans-serif;
+    background-color: #7BD3EA;
+}
+
+#navbarContainer {
+    position: sticky;
+    top: 0;
+    z-index: 999; /* Pastikan z-index cukup tinggi agar navbar muncul di atas konten */
+    background-color: #F6F7C4;
+    padding: 0;
+}
+
+
+.wrapper {
+    width: 90%; /* Menggunakan persentase agar responsif */
+    max-width: 1100px; /* Maksimum lebar kontainer */
+    margin: auto;
+    padding: 20px; /* Padding untuk konten */
+
+}
+
+#Home {
+    height: auto; /* Menjadikan tinggi fleksibel */
+    display: grid;
+    grid-template-columns: 1fr; /* Satu kolom */
+    align-items: center;
+    gap: 20px; /* Jarak antar elemen */
+}
+
+.hello {
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    color: #788585;
+    font-weight: 650;
+    font-size: 2rem; /* Ukuran huruf yang diperkecil */
+}
+
+.nama {
+    font-size: 3rem;
+    margin: 0.5rem 0 1rem;
+    color: black;
+}
+
+/* text bergerak */
+.textAnimation {
+    text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
+}
+
+.containerText {
+    font-size: 2rem;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+  }
+
+.animation {
+    color: #e5e5e5;
+    height:50px;
+    overflow:hidden;
+    margin-left: 1rem;
+    text-transform: uppercase;
+}
+
+.animation > div > div {
+  padding: 0.25rem 0.75rem;
+  height:2.81rem;
+  margin-bottom: 3rem;
+  display:inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+
+.first div {
+  background-color:#20a7d8;
+  border-radius: 5px;
+}
+.second div {
+  background-color:#FEBBCC;
+  border-radius: 5px;
+}
+.third div {
+  background-color:#9b20d8;
+  border-radius: 5px;
+}
+
+@keyframes text-animation {
+  0% {margin-top: 0;}
+  10% {margin-top: 0;}
+  20% {margin-top: -5rem;}
+  30% {margin-top: -5rem;}
+  40% {margin-top: -10.5rem;}
+  60% {margin-top: -10.5rem;}
+  70% {margin-top: -5rem;}
+  80% {margin-top: -5rem;}
+  90% {margin-top: 0;}
+  100% {margin-top: 0;}
+}
+
+
+/* button */
+.btn {
+    padding: 0.8rem 2rem;
+    background: #E48586;
+    border: 1.5px solid #008E95;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+}
+
+.home-right img {
+    width: 100%; /* Gambar akan mengisi lebar kontainer */
+    max-width: 400px; /* Maksimum lebar gambar */
+    height: auto; /* Gambar akan menyesuaikan tinggi sesuai proporsi aslinya */
+    border-radius: 50px;
+}
+
+.home-right {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    margin-left: -20px; /* Mengatur margin kiri ke nilai negatif untuk menutupi padding konten */
+    margin-right: -20px; /* Mengatur margin kanan ke nilai negatif untuk menutupi padding konten */
+    padding-bottom: 5rem; /* Padding bawah untuk konten */
+}
+
+/* about */
+#About {
+    background-color: #8EA7E9;
+    height: 100vh;
+    border-radius: 40px;
+}
+
+.aboutTop {
+    display: flex;
+    overflow-x: auto; /* Mengaktifkan overflow-x agar dapat digulir secara horizontal */
+    background-color: #FF8FB1;
+}
+
+.item {
+    position: relative;
+    flex: 0 0 auto; /* Mengatur item agar tidak fleksibel dalam ukuran lebarnya */
+    width: 300px; /* Atur lebar item sesuai kebutuhan Anda */
+    margin-right: 5px; /* Menambahkan jarak antar item */
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #D8D9CF;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.item:hover .overlay {
+    height: 100%;
+}
+
+.text {
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* about bottom */
+/* about bottom */
+
+.deskripsi {
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 2rem;
+
+}
+
+.aboutBottom {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 12px;
+    font-size: 2rem;
+    font-weight: bold;  
+    margin-top: 3rem;
+}
+
+/* skill */
+.nameSkill {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    margin: 3rem;
+    background-color:#55C6CC;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+#slider {
+    margin: 0 auto;
+    width: 800px;
+    max-width: 100%;
+    text-align: center;
+ }
+ #slider input[type=radio] {
+    display: none;
+ }
+ #slider label {
+    cursor:pointer;
+    text-decoration: none;
+ }
+ #slides {
+    padding: 10px;
+    border: 3px solid #ccc;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+ }
+ #overflow {
+    width: 100%;
+    overflow: hidden;
+ }
+ #slide1:checked ~ #slides .inner {
+    margin-left: 0;
+ }
+ #slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+ }
+ #slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+ }
+ #slide4:checked ~ #slides .inner {
+    margin-left: -300%;
+ }
+ #slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    line-height: 0;
+    height: 300px;
+ }
+ #slides .slide {
+    width: 25%;
+    float:left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+ }
+ #slides .slide_1 {
+    background-image: url('https://wallpaperaccess.com/full/9432779.jpg');
+    background-size: cover; /* Untuk memastikan gambar mengisi seluruh area slide */
+    background-position: center; /* Untuk memastikan gambar terpusat di slide */
+}
+ #slides .slide_2 {
+    background-image: url('img/html.png');
+    background-size: cover; /* Untuk memastikan gambar mengisi seluruh area slide */
+    background-position: center; /* Untuk memastikan gambar terpusat di slide */
+ }
+ #slides .slide_3 {
+    background-image: url('https://images.viblo.asia/2a35653e-a0c9-4e35-994b-e3215541414f.png');
+    background-size: cover; /* Untuk memastikan gambar mengisi seluruh area slide */
+    background-position: center; /* Untuk memastikan gambar terpusat di slide */
+ }
+ #slides .slide_4 {
+    background-image: url('img/aws.png');
+    background-size: cover; /* Untuk memastikan gambar  mengisi seluruh area slide */
+    background-position: center; /* Untuk memastikan gambar terpusat di slide */
+ }
+ #controls {
+    margin: -180px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+ }
+ #controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+ }
+ #controls label:hover {
+    opacity: 1;
+ }
+ #slide1:checked ~ #controls label:nth-child(2),
+ #slide2:checked ~ #controls label:nth-child(3),
+ #slide3:checked ~ #controls label:nth-child(4),
+ #slide4:checked ~ #controls label:nth-child(1) {
+    background: url('img/8666777_chevron_right_arrow_icon.svg') no-repeat;
+    float:right;
+    margin: 0 -50px 0 0;
+    display: block;
+ }
+ #slide1:checked ~ #controls label:nth-last-child(2),
+ #slide2:checked ~ #controls label:nth-last-child(3),
+ #slide3:checked ~ #controls label:nth-last-child(4),
+ #slide4:checked ~ #controls label:nth-last-child(1) {
+    background: url('img/8666557_chevron_left_icon.svg') no-repeat;
+    float:left;
+    margin: 0 0 0 -50px;
+    display: block;
+ }
+ #bullets {
+    margin: 150px 0 0;
+    text-align: center;
+ }
+ #bullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius:100%;
+    background: #ccc;
+    margin: 0 10px;
+ }
+ #slide1:checked ~ #bullets label:nth-child(1),
+ #slide2:checked ~ #bullets label:nth-child(2),
+ #slide3:checked ~ #bullets label:nth-child(3),
+ #slide4:checked ~ #bullets label:nth-child(4) {
+    background: #444;
+ }
+ @media screen and (max-width: 900px) {
+    #slide1:checked ~ #controls label:nth-child(2),
+    #slide2:checked ~ #controls label:nth-child(3),
+    #slide3:checked ~ #controls label:nth-child(4),
+    #slide4:checked ~ #controls label:nth-child(1),
+    #slide1:checked ~ #controls label:nth-last-child(2),
+    #slide2:checked ~ #controls label:nth-last-child(3),
+    #slide3:checked ~ #controls label:nth-last-child(4),
+    #slide4:checked ~ #controls label:nth-last-child(1) {
+       margin: 0;
+    }
+    #slides {
+       max-width: calc(100% - 140px);
+       margin: 0 auto;
+    }
+ }
+
+ /* Contact */
+ /* Styling untuk bagian Contact */
+#Contact {
+    margin-top: 50px; /* Jarak antara bagian atas halaman dengan bagian Contact */
+    background-color: #2bb8c0;
+    padding-top: 20px;
+  }
+  
+  /* Styling untuk judul Contact */
+  .ContactTop {
+    font-size: 24px;
+    color: black; /* Warna teks */
+    text-align: center; /* Posisi teks menjadi tengah */
+  }
+  
+  /* Styling untuk bagian bawah Contact */
+  .ContactBottom {
+    display: flex;
+    justify-content: center; /* Mengatur konten agar berada di tengah */
+  }
+  
+/* Styling untuk bagian footer */
+.footer {
+    display: flex;
+    justify-content: space-between; /* Mengatur jarak antara bagian footer */
+    max-width: 800px; /* Lebar maksimum footer */
+    margin: 20px auto; /* Mengatur jarak antara bagian Contact dengan footer */
+    padding: 0 20px; /* Memberikan ruang di sisi kanan dan kiri footer */
+  }
+  
+  /* Styling untuk setiap bagian footer */
+  .footer-section {
+    flex: 1; /* Membuat bagian footer-section memanjang untuk mengisi ruang */
+    padding: 10px;
+  }
+  
+  /* Styling untuk judul setiap bagian footer */
+  .footer-section h3 {
+    font-size: 18px;
+    color: #111; /* Warna teks */
+    margin-bottom: 5px; /* Jarak antara judul dan teks */
+    text-align: center;
+  }
+  
+  /* Styling untuk teks setiap bagian footer */
+  .footer-section p {
+    font-size: 14px;
+    color: #333; /* Warna teks */
+    margin: 5px;
+  }
+  
+  .footer-section .link {
+    display: inline-block; /* Membuat link menjadi inline block agar dapat menggunakan margin otomatis */
+    margin: 0 10px; /* Memberikan ruang di antara ikon */
+  }
+  
+  .footer-section .link img {
+    width: 50px; /* Lebar ikon */
+    height: auto; /* Tinggi ikon menyesuaikan proporsi */
+    display: block; /* Membuat ikon menjadi blok agar dapat menggunakan margin otomatis */
+    margin: 0 auto; /* Menengahkan ikon secara horizontal */
+  }
+  
+  
+  
+
+/* Media queries */
+@media only screen and (min-width: 768px) {
+    /* Tablet dan layar yang lebih besar */
+    #Home {
+        grid-template-columns: 1fr 1fr; /* Dua kolom */
+    }
+
+    .hello {
+        font-size: 1rem; /* Ukuran huruf yang lebih besar */
+    }
+}
+
+@media only screen and (max-width: 710px) {
+    /* Tablet dan layar yang lebih besar */
+    
+    .deskripsi {
+        display: none;
+    }
+
+    .aboutBottom {
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 12px;
+        font-size: 2rem;
+        font-weight: bold;  
+        margin-top: 10.8rem;
+    }
+    
+
+}
+
+
